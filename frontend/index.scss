@@ -1,0 +1,49 @@
+:root {
+  --gradient: linear-gradient(to bottom right, #444444, #009a5b);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  background-image: var(--gradient);
+  background-size: 400%;
+  background-position: top;
+  animation: bg-animation 5s infinite alternate;
+  font-size: 1.5rem;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+main {
+  color: #fff6d5;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.logo {
+  height: 20em;
+  background: url("https://media3.giphy.com/media/R7AW255ijTdV6/giphy.gif")
+    no-repeat scroll center center;
+  mix-blend-mode: darken;
+  outline: none;
+}
+
+h1 + .subtitle {
+  display: block;
+  margin-top: -1em;
+}
